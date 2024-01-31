@@ -9,6 +9,7 @@ ca-certificates=2023.12.12=h06a4308_0
 click=8.1.7=py311h06a4308_0
 flask=2.2.5=py311h06a4308_0
 flask-smorest=0.42.3=pypi_0
+flask-sqlalchemy=3.0.2=py311h06a4308_0
 greenlet=3.0.1=py311h6a678d5_0
 itsdangerous=2.0.1=pyhd3eb1b0_0
 jinja2=3.1.2=py311h06a4308_0
