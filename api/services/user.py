@@ -31,3 +31,15 @@ class UserService:
         db.session.commit()
 
         return True, 'User created successfully'
+
+    @staticmethod
+    def get_user(user_id):
+        pass
+
+    @staticmethod
+    def update_user(user_id, data):
+        pass
+
+    @staticmethod
+    def delete_user(user_id):
+        pass
