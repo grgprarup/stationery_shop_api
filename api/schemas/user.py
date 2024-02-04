@@ -6,7 +6,3 @@ class UserSchema(Schema):
     username = fields.Str(required=True)
     password = fields.Str(required=True)
     email = fields.Email()
-    created_at = fields.DateTime(dump_only=True)
-    updated_at = fields.DateTime(dump_only=True)
-    is_activated = fields.Boolean(dump_only=True)
-    is_admin = fields.Boolean(dump_only=True)
