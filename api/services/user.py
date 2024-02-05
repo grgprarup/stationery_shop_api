@@ -1,8 +1,5 @@
-from flask.views import MethodView
-from flask_smorest import Blueprint
-
 from api.schemas.user import UserSchema
-from api.models.user import User
+from api.models.user import UserModel
 from db import db
 
 
@@ -12,34 +9,31 @@ class UserService:
     @staticmethod
     def get_all_users():
         """Get all users"""
-        users = User.query.all()
-        return UserService.user_schema.dump(users, many=True)
+        users = UserModel.query.all()
+        return users
 
     @staticmethod
     def create_user(user_data):
+        print(user_data)
         """Create a new user."""
-        result, errors = UserService.user_schema.load(user_data)
+        if UserModel.query.filter_by(UserModel.username == user_data['username']).first():
+            return {'message': 'Username already exists'}, 409
 
-        if errors:
-            return False, errors
-
-        if User.query.filter_by(username=result['username']).first():
-            return False, 'Username already exists'
-
-        new_user = User(username=result['username'], password=result['password'])
-        db.session.add(new_user)
+        user = UserModel(username=user_data['username'], password=user_data['password'])
+        db.session.add(user)
         db.session.commit()
 
-        return True, 'User created successfully'
+        return {'message': 'User created successfully'}, 201
 
     @staticmethod
-    def get_user(user_id):
+    def get_user_by_id(user_id):
+        user = UserModel.query.filter(UserModel.id == user_id).first()
+        return UserService.user_schema.dump(user)
+
+    @staticmethod
+    def update_user_by_id(user_id, data):
         pass
 
     @staticmethod
-    def update_user(user_id, data):
-        pass
-
-    @staticmethod
-    def delete_user(user_id):
+    def delete_user_by_id(user_id):
         pass
