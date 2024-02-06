@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_smorest import Api
 
-from api.routes.user import user_blueprint
+from api.views.user import user_blueprint
 from db import db
 
 app = Flask(__name__)
