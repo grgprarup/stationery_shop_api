@@ -1,12 +1,17 @@
-name: stationery_shop_api_2
+name: stationery_shop_api
 channels:
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=main
   - _openmp_mutex=5.1=1_gnu
+  - argon2-cffi=21.3.0=pyhd3eb1b0_0
+  - argon2-cffi-bindings=21.2.0=py311h5eee18b_0
+  - bcrypt=3.2.0=py311h5eee18b_1
   - bzip2=1.0.8=h7b6447c_0
   - ca-certificates=2023.12.12=h06a4308_0
+  - cffi=1.16.0=py311h5eee18b_0
   - click=8.1.7=py311h06a4308_0
+  - cryptography=41.0.7=py311hdda0065_0
   - flask=2.2.5=py311h06a4308_0
   - flask-sqlalchemy=3.0.2=py311h06a4308_0
   - greenlet=3.0.1=py311h6a678d5_0
@@ -23,10 +28,13 @@ dependencies:
   - ncurses=6.4=h6a678d5_0
   - openssl=3.0.13=h7f8727e_0
   - packaging=23.1=py311h06a4308_0
+  - passlib=1.7.4=pyhd3eb1b0_0
   - pip=23.3.1=py311h06a4308_0
+  - pycparser=2.21=pyhd3eb1b0_0
   - python=3.11.7=h955ad1f_0
   - readline=8.2=h5eee18b_0
   - setuptools=68.2.2=py311h06a4308_0
+  - six=1.16.0=pyhd3eb1b0_1
   - sqlalchemy=2.0.25=py311h5eee18b_0
   - sqlite=3.41.2=h5eee18b_0
   - tk=8.6.12=h1ccaba5_0

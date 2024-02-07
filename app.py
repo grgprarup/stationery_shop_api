@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_smorest import Api
 
-from api.views.user import user_blueprint
+from api.resources.user import user_blueprint
 from db import db
 
 app = Flask(__name__)
@@ -21,7 +21,7 @@ api = Api(app)
 with app.app_context():
     db.create_all()
 
-api.register_blueprint(user_blueprint, url_prefix='/api/v1')
+api.register_blueprint(user_blueprint, url_prefix=f'/api/{app.config["API_VERSION"]}')
 
 if __name__ == '__main__':
     app.run(debug=True)
