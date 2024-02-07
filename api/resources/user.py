@@ -35,7 +35,7 @@ class UserDetail(MethodView):
     @user_blueprint.response(200, UserSchema)
     def get(self, user_id):
         """Get a user by ID."""
-        user = UserModel.query.get_or_404(user_id)
+        user = UserModel.query.get_or_404(user_id, description='User not found')
 
         return user
 
@@ -61,10 +61,11 @@ class UserDetail(MethodView):
 
         return user
 
-    @user_blueprint.response(204)
+    @user_blueprint.response(204, UserSchema)
     def delete(self, user_id):
         """Delete a user by ID."""
-        user = UserModel.query.get_or_404(user_id)
+        user = UserModel.query.get_or_404(user_id, description='User not found')
+
         db.session.delete(user)
         db.session.commit()
 
