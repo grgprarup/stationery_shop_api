@@ -49,4 +49,4 @@ dependencies:
       - apispec==6.4.0
       - flask-smorest==0.42.3
       - webargs==8.4.0
-prefix: /home/prarup/anaconda3/envs/stationery_shop_api
+prefix: ~/anaconda3/envs/stationery_shop_api
