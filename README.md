@@ -7,33 +7,56 @@ This is a simple API for a stationery shop. It is built using Flask and SQLAlche
 
 ## Installation
 1. Clone the repository
-```
-git clone https://github.com/grgprarup/stationery_shop_api.git
-cd stationery_shop_api
-```
+    ```
+    git clone https://github.com/grgprarup/stationery_shop_api.git
+    cd stationery_shop_api
+    ```
 2. Create a virtual environment using conda
-```
-conda create -n stationery_shop_api
-```
+    ```
+    conda create -n stationery_shop_api
+    ```
+   OR using environment.yml
+    ```
+    conda env create -f environment.yml
+    ```
 3. Activate and Deactivate the virtual environment
-```
-conda activate stationery_shop_api
-```
-```
-conda deactivate
-```
+    ```
+    conda activate stationery_shop_api
+    ```
+    ```
+    conda deactivate
+    ```
 4. Install the dependencies
-```
-conda install --file requirements.txt
-```
-5. Run the app
-```
-python app.py
-```
+   - Using environment.yml
+     ```
+     conda env update -f environment.yml
+     ```
+   - Using requirements.txt
+     ```
+     conda install -f requirements.txt
+     ```
+5. Update the dependencies
+    ```
+    conda env update -f environment.yml
+    ```
+6. Run the app
+    ```
+    python app.py
+    ```
 
 ## Create requirements.txt
 ```
 conda list -e > requirements.txt
+```
+
+## Create environment.yml
+```
+conda env export > environment.yml
+```
+
+## Delete environment
+```
+conda env remove -n stationery_shop_api
 ```
 
 ## Usage
