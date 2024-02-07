@@ -32,7 +32,7 @@ This is a simple API for a stationery shop. It is built using Flask and SQLAlche
    ```
 5. Run the app
    ```
-   python app.py
+   flask run
    ```
 
 ### Create environment.yml
