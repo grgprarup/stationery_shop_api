@@ -3,9 +3,9 @@ from flask_smorest import Blueprint, abort
 from passlib.hash import pbkdf2_sha256
 from sqlalchemy.exc import IntegrityError, SQLAlchemyError
 
+from api.schemas import UserSchema, UserUpdateSchema
 from db import db
-from models.user import UserModel
-from api.schemas.user import UserSchema, UserUpdateSchema
+from models import UserModel
 
 user_blueprint = Blueprint('Users', 'users', description='User operations')
 

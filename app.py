@@ -5,8 +5,7 @@ from flask import Flask, jsonify
 from flask_smorest import Api
 from flask_jwt_extended import JWTManager
 
-from api.resources.user import user_blueprint
-from api.resources.auth import auth_blueprint
+from api.resources import user_blueprint, auth_blueprint
 from blocklist import BLOCKLIST
 from db import db
 

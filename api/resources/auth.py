@@ -3,7 +3,7 @@ from flask_jwt_extended import create_access_token, create_refresh_token, get_jw
 from flask_smorest import Blueprint, abort
 from passlib.hash import pbkdf2_sha256
 
-from api.schemas.user import UserLoginSchema
+from api.schemas import UserLoginSchema
 from blocklist import BLOCKLIST
 from models import UserModel
 
