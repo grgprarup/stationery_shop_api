@@ -18,3 +18,9 @@ class UserLogin(MethodView):
             return {'message': 'Logged in successfully.'}, 200
 
         abort(401, message='Invalid username or password.')
+
+
+@auth_blueprint.route('/logout/', methods=['DELETE'])
+class UserLogout(MethodView):
+    def delete(self):
+        return {'message': 'Logged out successfully.'}, 200
