@@ -13,3 +13,8 @@ class UserUpdateSchema(Schema):
     full_name = fields.Str()
     username = fields.Str()
     password = fields.Str()
+
+
+class UserLoginSchema(Schema):
+    username = fields.Str(required=True)
+    password = fields.Str(required=True)

@@ -23,7 +23,9 @@ class UserList(MethodView):
         if UserModel.query.filter_by(username=user_data['username']).first():
             abort(409, message='Username already exists')
 
-        user = UserModel(full_name=user_data['full_name'],username=user_data['username'], password=pbkdf2_sha256.hash(user_data['password']), confirm_password=pbkdf2_sha256.hash(user_data['confirm_password']))
+        user = UserModel(full_name=user_data['full_name'], username=user_data['username'],
+                         password=pbkdf2_sha256.hash(user_data['password']),
+                         confirm_password=pbkdf2_sha256.hash(user_data['confirm_password']))
         db.session.add(user)
         db.session.commit()
 
