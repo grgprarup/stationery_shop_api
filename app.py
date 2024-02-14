@@ -4,6 +4,7 @@ from flask import Flask
 from flask_smorest import Api
 
 from api.resources.user import user_blueprint
+from api.resources.auth import auth_blueprint
 from db import db
 
 
@@ -27,5 +28,6 @@ def create_app():
         db.create_all()
 
     api.register_blueprint(user_blueprint, url_prefix=f'/api/{app.config["API_VERSION"]}')
+    api.register_blueprint(auth_blueprint, url_prefix=f'/api/{app.config["API_VERSION"]}/auth')
 
     return app
