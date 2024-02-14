@@ -46,7 +46,9 @@ dependencies:
   - xz=5.4.5=h5eee18b_0
   - zlib=1.2.13=h5eee18b_0
   - pip:
-      - apispec==6.4.0
-      - flask-smorest==0.42.3
-      - webargs==8.4.0
-prefix: ~/anaconda3/envs/stationery_shop_api
+    - apispec==6.4.0
+    - flask-jwt-extended==4.6.0
+    - flask-smorest==0.42.3
+    - pyjwt==2.8.0
+    - webargs==8.4.0
+prefix: /home/thunderbolt/anaconda3/envs/stationery_shop_api
