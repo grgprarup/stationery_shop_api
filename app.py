@@ -4,6 +4,7 @@ import secrets
 from flask import Flask, jsonify
 from flask_smorest import Api
 from flask_jwt_extended import JWTManager
+from flask_cors import CORS
 
 from api.resources import user_blueprint, auth_blueprint
 from blocklist import BLOCKLIST
@@ -12,6 +13,13 @@ from db import db
 
 def create_app():
     app = Flask(__name__)
+    remote_origin = os.getenv("REMOTE_ORIGIN")
+    origins = []
+    if remote_origin:
+        origins.append(remote_origin)
+
+    CORS(app, origins=origins, supports_credentials=True)
+
     app.config['PROPAGATE_EXCEPTIONS'] = True  # Change to False in production
     app.config['API_TITLE'] = 'Stationery Shop API'
     app.config['API_VERSION'] = 'v1.0'
