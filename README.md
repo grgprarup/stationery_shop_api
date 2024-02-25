@@ -35,6 +35,16 @@ This is a simple API for a stationery shop. It is built using Flask and SQLAlche
    flask run
    ```
 
+## Run the app using Docker
+1. Build the Docker image
+   ```
+   docker build -t stationery_shop_api .
+   ```
+2. Run the Docker container
+   ```
+   docker run -d -p 5000:5000 stationery_shop_api
+   ```
+
 ### Create environment.yml
 ```
 conda env export > environment.yml
