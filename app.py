@@ -14,7 +14,7 @@ from db import db
 def create_app():
     app = Flask(__name__)
     remote_origin = os.getenv("REMOTE_ORIGIN")
-    origins = []
+    origins = ["http://localhost:3000", "http://localhost:8080", "http://localhost:5000"]
     if remote_origin:
         origins.append(remote_origin)
 
