@@ -30,7 +30,7 @@ class UserLogout(MethodView):
     def delete(self):
         jti = get_jwt()['jti']
         BLOCKLIST.add(jti)
-        return {'message': 'Logged out successfully.'}, 200
+        return {'message': 'Logged out successfully.'}, 204
 
 
 @auth_blueprint.route('/refresh/', methods=['POST'])
