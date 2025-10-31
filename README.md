@@ -1,5 +1,15 @@
 # Stationery Shop API
-This is a simple API for a stationery shop. It is built using Flask and SQLAlchemy. It is a RESTful API that allows you to perform CRUD operations on the database.
+The Stationery Shop API is a simple yet powerful backend service built using Flask and SQLAlchemy. It provides a clean and efficient way to manage stationery inventory data through standard CRUD operations.
+
+⚙️ Key Features
+
+* 🗂 Create, Read, Update, Delete (CRUD) — Manage inventory records seamlessly.
+
+* 🧱 Flask + SQLAlchemy Stack — Combines the simplicity of Flask with the robustness of SQLAlchemy ORM.
+
+* 🔗 RESTful Architecture — Ensures structured, scalable, and maintainable API design.
+
+* 💾 Database Integration — Store and retrieve inventory data efficiently with relational database support.
 
 ## Prerequisites
 - [Python](https://www.python.org/) 3.11 or higher
